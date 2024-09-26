@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "services:up": "docker compose --file=infra/compose.yaml up --detach",
+    "services:down": "docker compose --file=infra/compose.yaml down",
+    "services:stop": "docker compose --file=infra/compose.yaml stop"
   },
   "keywords": [],
   "author": "",
