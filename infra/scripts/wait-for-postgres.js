@@ -16,13 +16,13 @@ function checkPostgres() {
       return;
     }
     console.log(
-      "\n🟢 \033[92mPostgres está pronto e aceitando conexões.\033[0m ",
+      "\n🟢 \x1b[92mPostgres está pronto e aceitando conexões.\x1b[0m ",
     );
   }
 }
 
 process.stdout.write(
-  "🟡 \033[33mAguardando Postgres aceitar conexões\033[0m\n",
+  "🟡 \x1b[33mAguardando Postgres aceitar conexões\x1b[0m\n",
 );
 
 checkPostgres();
