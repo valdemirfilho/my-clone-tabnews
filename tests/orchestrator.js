@@ -8,6 +8,7 @@ async function waitForAllServices() {
     }
     return retry(fetchStatusPage, {
       retries: 100,
+      maxTimeout: 1000,
     });
   }
   await waitForWebServer();
